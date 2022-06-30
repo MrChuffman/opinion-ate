@@ -6,6 +6,7 @@ import {loadRestaurants} from '../store/restaurants/actions';
 export const RestaurantList = ({loadRestaurants, restaurants}) => {
   useEffect(() => {
     loadRestaurants();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
