@@ -1,5 +1,6 @@
 import {useEffect} from 'react';
 import {connect} from 'react-redux';
+import {List, ListItem, ListItemText} from '@mui/material';
 
 import {loadRestaurants} from '../store/restaurants/actions';
 
@@ -10,13 +11,13 @@ export const RestaurantList = ({loadRestaurants, restaurants}) => {
   }, []);
 
   return (
-    <ul>
+    <List>
       {restaurants.map(restaurant => (
-        <li key={restaurant.id} className="">
-          {restaurant.name}
-        </li>
+        <ListItem key={restaurant.id} className="">
+          <ListItemText>{restaurant.name}</ListItemText>
+        </ListItem>
       ))}
-    </ul>
+    </List>
   );
 };
 
